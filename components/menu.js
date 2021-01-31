@@ -1,6 +1,6 @@
 const Menu = ({items}) => {
     return (
-        <div className='flex flex-row w-full xl:flex-col xl:mt-8 xl:mx-4 xl:rounded-md bg-accent-3 text-accent-1 uppercase'>
+        <div className='flex flex-row start w-full xl:w-auto justify-around xl:flex-col xl:mt-8 xl:m-2 xl:rounded-md bg-accent-3 text-accent-1 uppercase'>
             {
                 items.map(item => <MenuItem key={item.title} item={item} />)
             }

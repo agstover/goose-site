@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent-1': '#3E3F3F',
-        'accent-2': '#7F7C65',
+        'accent-1': '#2F243A',
+        'accent-2': '#00798C',
         'accent-3': '#FFFCF9',
-        'accent-4': '#974736',
-        'accent-5': '#F5D39A',
+        'accent-4': '#DB8A74',
+        'accent-5': '#FAC9B8',
         'accent-7': '#333',
         success: '#0070f3',
         cyan: '#79FFE1',
@@ -35,11 +35,13 @@ module.exports = {
         medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
       },
       maxWidth: {
+        '20': '5rem',
         '32': '8rem',
       }
     },
   },
   plugins: [
+    require('tailwind-scrollbar'),
     ({addComponents, theme }) => {
       addComponents({
         '.container': {

@@ -10,13 +10,31 @@ body, html, #__next {
 	width: 100%;
 }
 
+.content::before, .content::after {
+    height: 2rem;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 20px;
+    background: #ffffff;
+    z-index: 10;
+}
+
+.content::after {
+    top: auto;
+    bottom: 0;
+}
+
+
+
 /* LEAVES */
 
 body {background: #222;}
 
 /* leaf animations */
 
-#leaves {position:absolute;top:-50px;width:100%;text-align: right;}
+#leaves {position:absolute; top:-50px; left:0}
 
 #leaves i {
     display: inline-block;
@@ -28,7 +46,7 @@ body {background: #222;}
     box-shadow: inset 0px 0px 1px #222;
     border: 1px solid #333;
     z-index: -10;
-    -webkit-animation: falling 5s 0s infinite;
+    -webkit-animation: falling 10s 0s infinite;
 }
 
 #leaves i:nth-of-type(2n) { -webkit-animation: falling2 5s 0s infinite; }

@@ -1,31 +1,26 @@
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/graphcms'
 import Head from 'next/head'
+import Header from 'components/header'
+import MoreStories from 'components/more-stories'
 
 
 export default function Index({ posts, preview }) {
   const heroPost = posts[0]
   const morePosts = posts.slice(1)
+  console.log("POSTS", posts)
   return (
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Kate Acharte</title>
+          <title>About | Kate Acharte</title>
         </Head>
-        {/* <p>
+        <Header>About Me</Header>
+        <p>
           Kate Acharte is a Landscape Designer who graduated from X and lives in Utah.
-        </p> */}
-          {/* {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )} */}
-          {/* {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+        </p> 
+
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
       </Layout>
     </>
   )
@@ -37,4 +32,3 @@ export async function getStaticProps({ preview = false }) {
     props: { posts, preview },
   }
 }
-
