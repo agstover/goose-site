@@ -7,7 +7,7 @@ import Leaves from './leaves'
 const MenuItems = [
   {
     title: 'About',
-    href: '/about'
+    href: '/'
   },
   {
     title: 'Resume',
@@ -36,7 +36,6 @@ const Layout = ({ children }) => {
             <Content>
               {children}
             </Content>      
-          
         </div>
       </div>
     </>

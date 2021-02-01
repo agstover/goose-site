@@ -28,7 +28,7 @@ export default function Meta() {
         color="#000000"
       />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
