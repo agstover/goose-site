@@ -27,10 +27,6 @@ export default function HeroPost({
             <Date dateString={date} />
           </div>
         </div>
-        <div>
-          <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture.url} />
-        </div>
       </div>
     </section>
   )

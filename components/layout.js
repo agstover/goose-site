@@ -28,7 +28,19 @@ const Layout = ({ children }) => {
   return (
     <>
       <Meta />
-      <div className='flex justify-center items-start h-full w-full bg-gradient-to-r overflow-x-hidden xl:overflow-hidden from-accent-1 to-accent-2 overflow-scroll'>
+      <div className='flex justify-center items-start h-full w-full bg-gradient-to-r overflow-x-hidden xl:overflow-hidden background from-accent-1 to-accent-2 overflow-scroll'>
+        <ul className='leaves'>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       {/* <Leaves/> */}
         <div className='container flex flex-row items-start flex-wrap xl:flex-nowrap xl:self-center'>
           <Menu items={MenuItems}/>
