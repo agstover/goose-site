@@ -1,6 +1,5 @@
 import {useRouter} from 'next/router'
 import Link from 'next/link'
-import MenuIcon from 'icons/menu'
 
 const Menu = ({items, className, toggleDrawer}) => {
     return (
@@ -33,7 +32,7 @@ const Hamburger = ({className, toggle}) => {
 
 const Download = ({className}) => {
     return (
-        <button className={`bg-accent-1 text-accent-4 p-4 w-full ${className}`}>CV</button>
+        <button className={`bg-accent-1 font-bold text-accent-4 p-4 w-full ${className}`}>CV</button>
     )
 }
 
@@ -51,11 +50,15 @@ const MenuBox = ({className, items}) => {
 
 const MenuItem = ({item, isFirst, isLast}) => {
     const router = useRouter()
-    const activeStyle = item.href === router.pathname ? 'bg-gray-300' : ''
+    const isActive = item.href === router.pathname
     return (
         <Link href={item.href}>
-            <a className={`${activeStyle} ${isFirst ? 'rounded-t-lg' : ''} ${isLast ? 'rounded-b-lg' : ''}` } href={item.href}>
-                <div className='text-sm text-center p-1'>{item.title}</div>
+            <a href={item.href}>
+                {
+                    item.icon
+                    ? <item.icon className={`mx-auto w-8 h-8 my-4 ${isActive ? 'text-accent-4' : 'text-gray-200'}` }/>
+                    : <h1>{item.title}</h1>
+                }
             </a>       
         </Link>
     )

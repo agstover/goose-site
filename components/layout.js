@@ -6,22 +6,27 @@ import Drawer from 'components/drawer'
 import {useState} from 'react'
 import Overlay from 'components/overlay'
 import { motion } from 'framer-motion'
+import { User as UserIcon, Work as WorkIcon, Blog as BlogIcon, Contact as ContactIcon } from 'icons'
 
 const MenuItems = [
   {
     title: 'About',
+    icon: UserIcon,
     href: '/'
   },
   {
     title: 'Resume',
+    icon: WorkIcon,
     href: '/resume'
   },
   {
     title: 'Blog',
+    icon: BlogIcon,
     href: '/blog'
   },
   {
     title: 'Contact',
+    icon: ContactIcon,
     href: '/contact'
   }
 ]
