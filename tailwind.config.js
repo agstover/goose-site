@@ -1,3 +1,5 @@
+const autoprefixer = require('autoprefixer')
+
 module.exports = {
   purge: ['./components/**/*.js', './pages/**/*.js'],
   corePlugins: {
@@ -5,15 +7,16 @@ module.exports = {
   },
   theme: {
     extend: {
+      backgroundImage: theme => ({
+        'hero': "url('public/kate.jpg')",
+       }),
       colors: {
-        'accent-1': '#2F243A',
-        'accent-2': '#00798C',
-        'accent-3': '#FFFCF9',
-        'accent-4': '#DB8A74',
-        'accent-5': '#FAC9B8',
-        'accent-7': '#333',
-        success: '#0070f3',
-        cyan: '#79FFE1',
+        'accent-1': '#1F1F1F',
+        'accent-2': '#414141',
+        'accent-3': '#666b59',
+        'accent-4': '#d4af37',
+        'accent-5': '#78a14f',
+        'accent-7': '#333'
       },
       spacing: {
         28: '7rem',
@@ -30,13 +33,13 @@ module.exports = {
         '7xl': '4.5rem',
         '8xl': '6.25rem',
       },
-      boxShadow: {
-        small: '0 5px 10px rgba(0, 0, 0, 0.12)',
-        medium: '0 8px 30px rgba(0, 0, 0, 0.12)',
-      },
       maxWidth: {
-        '20': '5rem',
-        '32': '8rem',
+        'left-pane': 'calc(50% - 30px);',
+        'right-pane': 'calc(50% + 30px)',
+      },
+      boxShadow : {
+        'right': 'inset -7px 0 9px -7px rgba(0,0,0,0.7)',
+        'left': 'inset 7px 0 9px -7px rgba(0,0,0,0.7)',
       }
     },
   },
@@ -46,38 +49,15 @@ module.exports = {
       addComponents({
         '.container': {
           position: 'relative',
-          top: '0',
-          left: '0',
+          paddingRight: '15px',
+          paddingLeft: '15px',
+          margin: '0 auto',
+          height: '100%',
           width: '100%',
-          // height: '84vh',
-          // maxWidth: '1268px',
-          maxHeight: '674px',
-
-          // Breakpoints
-          // "@screen sm": {
-          //   maxWidth: theme("screens.sm"),
-          // },
           '@screen sm': {
             margin: '0 auto',
-            width: '100%',
-          },
-          // "@screen md": {
-          //   // margin: '8vh 6vw',
-          //   // margin: '0 auto',
-          //   // padding: '0 15px 0 100px',
-          //   // top: '20px',
-          //   // left: 0,
-          //   marginLeft: 'auto',
-          //   marginRight: 'auto',
-          //   height: 'auto',
-          //   transform: 'none',
-          // },
-          "@screen xl": {
-            maxWidth: '1268px',
-            maxHeight: '674px',
-            margin: '5vh 3vw',
-            height: '90vh'
-          },
+            maxWidth: '1140px'
+          }
         }
       })
     }
