@@ -13,6 +13,7 @@ export default function Blog({ posts, preview }) {
         <Head>
           <title>Kate Acharte</title>
         </Head>
+        <h1 className='tracking-tighter text-5xl font-bold mb-8'>My Blog</h1>
         {heroPost && (
         <HeroPost
             title={heroPost.title}
